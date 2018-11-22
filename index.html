@@ -7,9 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Star Wars RPG!</title>
-    
+    <style>
+        .playerselection {
+            height: 150px;
+            width: 150px;
+            border-width: 2px;
+            border-color: white;
+            border-style: solid;
+            margin-right: 15px;
+        }
+
+        .goodguy {
+            height: 150px;
+            width: 150px;
+            border-width: 2px;
+            border-color: green;
+            border-style: solid;
+        }
+
+        .selectbadguy {
+            height: 150px;
+            width: 150px;
+            border-width: 2px;
+            border-color: white;
+            border-style: solid;
+            margin-right: 15px;
+        }
+
+        .badguy {
+            height: 150px;
+            width: 150px;
+            border-width: 2px;
+            border-color: red;
+            border-style: solid;
+        }
+    </style>
 </head>
 
 <body style="background-image: url(./assets/images/StarWars.jpg); height: 100%;background-size:cover; text-align:center;">
@@ -19,18 +53,19 @@
     </div>
 
     <div class="container" style="background-color:rgba(128, 128, 128, 0.37); margin-top:3%; color:black;">
-        <img id="characterimg" src="" alt="" style="height:400px; width:400px;">
-        <div>Your Charecter
-            <div id="yourCharecterChoice"></div>
+        <div id="goodcharacterselection"> Choose your character!</div>
+        <div id="characterimg"></div>
+        <div id="yourcharactertext">Your Character:
+            <div id="yourCharacterChoice"></div>
         </div>
 
-        <div>Ememies Available TO Attack
+        <div id="enemiesselectiontext">Choose and enemy to attack:
             <div id="enemiesAvailable"></div>
         </div>
-        <div>Fight Selection
+        <div id="fightselectiontext">Fight Selection
         </div>
-        <button class="button">Attack</button>
-        <div>Defender</div>
+        <button id="btnAttack" class="button">Attack</button>
+        <div id="defendertext">Defender</div>
         <div id="Defender"></div>
     </div>
 
